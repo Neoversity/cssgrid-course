@@ -1,9 +1,9 @@
 @import url(./basic-styles.css);
 
 /* lesson styles */
-
+/* 
 .container {
-  display: grid;
+  /* display: grid; */
   /* display: inline-grid; */
   /* grid-template-columns: 100px 200px 400px;
   grid-template-rows: 200px 150px 100px; */
@@ -34,21 +34,21 @@
     "m m . s"
     "f f f f"; */
 
-    grid-template-columns: repeat(4, 150px);
+    /* grid-template-columns: repeat(4, 150px);
     grid-template-rows: repeat(3, 150px);
 
-    border: 10px solid;
+    border: 10px solid; */
   /* justify-items: center;
   align-items: center; */
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   /* align-content: space-evenly; */
 
-}
+/* } */ */
 
-.item-4 {
-  justify-self: stretch;
+/* .item-4 {
+  justify-self: end;
   align-self: stretch;
-}
+} */
 
 /* justify-items */
 
@@ -100,3 +100,20 @@
       "s f f f";
   }
 } */
+
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.grid-item {
+  border: 2px solid #000;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  align-items: center;
+  justify-items: center;
+}
